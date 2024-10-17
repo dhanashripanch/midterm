@@ -198,8 +198,6 @@ button:active {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    overflow-y: auto;
-    max-height: 100px;
 }
 
 .pet-reminders h5 {
@@ -218,6 +216,7 @@ button:active {
     margin-top: 5px;
     font-size: 0.85em;
     transition: background-color 0.3s ease;
+    margin-bottom: 5px;
 }
 
 .pet-reminders div:hover {
