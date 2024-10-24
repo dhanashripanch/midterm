@@ -2,31 +2,42 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('portrait-of-a-contemplative-golden-retriever.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #444;
+    color: #ffffff;
 }
 
 header {
-    background-color: #008cba;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 1em 0;
-    text-align: center;
+    padding: 1em 2em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand {
+    font-weight: bold;
+    color: white;
+    font-size: 1.2em;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-left: 15px;
 }
 
 header nav a {
@@ -41,35 +52,112 @@ header nav a:hover {
 }
 
 main {
-    max-width: 1000px;
-    margin: 20px auto;
+    padding-top: 80px;
+}
+
+.title {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.246);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #008cba;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005f7f;
+}
+
+.feature {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px 20px;
+    color: #ffffff;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    animation: fadeIn 0.5s ease-out;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+.feature-card:hover {
+    transform: translateY(-5px);
+}
 
-    to {
-        opacity: 1;
+.feature-card h3 {
+    color: #008cba;
+    margin-bottom: 10px;
+}
+
+#testimonials, #feature {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px 60px;
+    text-align: center;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        width: 100%;
     }
 }
 
-section h2 {
-    color: #51a5ff;
-    border-bottom: 2px solid #51a5ff;
-    padding-bottom: 8px;
+/* Keeping other existing styles */
+
+.dashboard-content,
+.form-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 label {
@@ -103,35 +191,6 @@ button:active {
     transform: scale(0.98);
 }
 
-.dashboard-overview {
-    display: flex;
-    gap: 20px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-
-.dashboard-card {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.dashboard-card:hover {
-    transform: translateY(-5px);
-}
-
-.form-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
 .pet-grid {
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +202,7 @@ button:active {
     background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 125px;
+    width: 130px;
     padding: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -152,8 +211,49 @@ button:active {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 250px;
+    min-height: 300px;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .action-button {
+    display: inline-block;
+    background-color: #008cba;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 120px;
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .action-button:hover {
+    background-color: #005f7f;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 600px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .action-button {
+      width: 80%;
+      max-width: none;
+    }
+  }
 
 @keyframes slideIn {
     from {
@@ -174,7 +274,7 @@ button:active {
 
 .pet-profile img {
     width: 100%;
-    height: 125px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -250,5 +350,9 @@ button:active {
     .pet-grid {
         flex-direction: column;
         align-items: center;
+    }
+
+    .feature-card {
+        width: 100%;
     }
 }

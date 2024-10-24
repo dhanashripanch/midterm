@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Reminders</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Set Reminders - Pet Care Tracker</title>
 </head>
 <body>
     <header>
-        <h1>Pet Care Tracker</h1>
+        <div class="brand">Pet Care Tracker</div>
         <nav>
             <ul>
+                <li><a href="landing.html">Home</a></li>
                 <li><a href="index.html">Dashboard</a></li>
                 <li><a href="add-pet.html">Add Pet</a></li>
                 <li><a href="set-reminders.html">Set Reminders</a></li>
@@ -18,15 +19,17 @@
         </nav>
     </header>
     <main>
-        <section id="set-reminders">
-            <h2>Set Reminders</h2>
+        <section class="title">
+            <h1>Set Reminder</h1>
+        </section>
+        <section class="form-container">
             <form id="care-log-form">
                 <label for="care-pet">Select Pet:</label>
                 <select id="care-pet" required></select>
 
-                <label for="care-activity">Select Activity:</label>
+                <label for="care-activity">Activity:</label>
                 <select id="care-activity" required>
-                    <option value="" disabled selected>Select an activity</option>
+                    <option value="">Select an activity</option>
                     <option value="Vaccination">Vaccination</option>
                     <option value="Vet Visit">Vet Visit</option>
                     <option value="Grooming">Grooming</option>
@@ -34,15 +37,13 @@
                     <option value="Feeding">Feeding</option>
                 </select>
 
-                <label for="reminder-datetime">Reminder Date</label>
-                <input type="datetime-local" id="reminder-datetime" name="reminder-datetime" required min="">
-                <button type="submit">Set Reminders</button>
+                <label for="reminder-datetime">Reminder Date and Time:</label>
+                <input type="datetime-local" id="reminder-datetime" required>
+
+                <button type="submit">Set Reminder</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>© 2024 Pet Care Tracker</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
