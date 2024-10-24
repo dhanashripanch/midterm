@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
             pets.push(pet);
             savePets();
             alert("Pet added successfully!");
-            window.location.href = 'index.html'; // Redirect to dashboard
+            window.location.href = 'dashboard.html'; // Redirect to dashboard
           };
           reader.readAsDataURL(petImage);
         }
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveReminders();
         clearReminderForm();
         alert("Reminder set successfully!");
-        window.location.href = 'index.html'; // Redirect to dashboard
+        window.location.href = 'dashboard.html'; // Redirect to dashboard
       });
     }
   }

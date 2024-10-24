@@ -4,31 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Care Dashboard</title>
+    <title>Pet Care Assistant</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <div class="brand">Pet Care Tracker</div>
         <nav>
             <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="add-pet.html">Add Pet</a></li>
-                <li><a href="set-reminders.html">Set Reminders</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#feature">Features</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="dashboard-content">
-            <div id="pet-grid" class="pet-grid"></div>
-            <div class="button-container">
-                <a href="add-pet.html" class="action-button add-pet-button">Add Pet</a>
-                <a href="set-reminders.html" class="action-button set-reminder-button">Set Reminder</a>
-              </div>
+
+        <section id="hero" class="hero">
+            <h1>Simplify Your Pet Care Routine</h1>
+            <p>Our easy-to-use web application helps you manage all aspects of your pet's life.</p>
+            <a href="dashboard.html" class="cta-button">Get Started</a>
         </section>
-    </main>
-    <script src="script.js"></script>
+
+        <section id="feature" class="feature">
+            <div class="features">
+                <h2>Features</h2>
+                <p>Our pet care assistant helps you coordinate and track pet-related activities with ease. Whether
+                    you're managing daily routines or planning for future appointments, our app is designed to make pet
+                    care simple and stress-free.</p>
+
+
+                <div class="feature-card">
+                    <h3>Vaccinations</h3>
+                    <p>Receive notifications when it's time for your pet's next vaccine.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Vet Visits</h3>
+                    <p>Get timely reminders for scheduled check-ups and health assessments.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Grooming Sessions</h3>
+                    <p>Never forget grooming appointments to keep your pet looking their best.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Feeding Times</h3>
+                    <p>Ensure your pet is fed on schedule, even when life gets busy.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Set Custom Reminders</h3>
+                    <p>Easily create reminders tailored to your pet's needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Receive Alerts</h3>
+                    <p>Get notified via pop-up alerts or notifications when it's time for an activity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>User Testimonials</h2>
+            <blockquote>"This app has transformed how I manage my dog's care. It's so easy to use!" - Jane D.
+            </blockquote>
+            <blockquote>"I love being able to keep my pet healthy. It makes everything so much simpler." - Mark S.
+            </blockquote>
+        </section>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
